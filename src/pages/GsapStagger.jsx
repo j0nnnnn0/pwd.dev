@@ -1,5 +1,22 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 const GsapStagger = () => {
   // TODO: Implement the gsap.stagger() method
+  useGSAP(() => {
+    gsap.from(".stagger-box", {
+      x: 250,
+      y: 250,
+      duration: 2,
+      ease: "power1.inOut",
+      rotation: 360,
+      borderRadius: "100%",
+      stagger: 0.5,
+      repeat: -1,
+      yoyo: true,
+    });
+  }, []);
+
 
   return (
     <main>
@@ -32,13 +49,13 @@ const GsapStagger = () => {
 
       <div className="mt-20">
         <div className="flex gap-5">
-          <div className="w-20 h-20 bg-indigo-200 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-indigo-300 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-indigo-400 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-indigo-500 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-indigo-600 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-indigo-700 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-indigo-800 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-green-200 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-green-300 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-green-400 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-green-500 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-green-600 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-green-700 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-green-800 rounded-lg stagger-box" />
         </div>
       </div>
     </main>
