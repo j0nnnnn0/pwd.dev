@@ -5,13 +5,19 @@ const GsapStagger = () => {
   // TODO: Implement the gsap.stagger() method
   useGSAP(() => {
     gsap.from(".stagger-box", {
-      x: 250,
+      x: 150,
       y: 250,
       duration: 2,
       ease: "power1.inOut",
       rotation: 360,
       borderRadius: "100%",
-      stagger: 0.5,
+      stagger: {
+        amount: 0.5,
+        grid: [6,3],
+        axis: "x",
+        ease: "circ.inOut",
+        from: "center",
+      },
       repeat: -1,
       yoyo: true,
     });
