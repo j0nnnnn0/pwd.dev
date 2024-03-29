@@ -1,23 +1,22 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const GsapTo = () => {
+const Symbolic = () => {
   // TODO: Implement the gsap.to() method
-useGSAP(() => {
-  gsap.to("#blue-box", {
-    x:250,
-    yoyo:true,
-    repeat:-1,
-    duration:5,
-    ease:"power1.inOut",
-    rotation:360,
-
-  })
-},[]);
+  useGSAP(() => {
+    gsap.to("#blue-box", {
+      x: 250,
+      yoyo: true,
+      repeat: -1,
+      duration: 5,
+      ease: "power1.inOut",
+      rotation: 360,
+    });
+  }, []);
 
   return (
     <main>
-      <h1>GsapTo</h1>
+      <h1>Symbolic</h1>
 
       <p className="mt-5 text-gray-500">
         The <code>gsap.to()</code> method is used to animate elements from their
@@ -50,4 +49,4 @@ useGSAP(() => {
   );
 };
 
-export default GsapTo;
+export default Symbolic;

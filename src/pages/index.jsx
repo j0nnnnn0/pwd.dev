@@ -1,5 +1,5 @@
 import Home from "./Home";
-import GsapTo from "./GsapTo";
+import Symbolic from "./Symbolic";
 import GsapFrom from "./GsapFrom";
 import GsapFromTo from "./GsapFromTo";
 import GsapStagger from "./GsapStagger";
@@ -8,7 +8,7 @@ import GsapScrollTrigger from "./GsapScrollTrigger";
 import GsapText from "./GsapText";
 
 export {
-  GsapTo,
+  Symbolic,
   GsapFrom,
   GsapFromTo,
   Home,

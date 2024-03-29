@@ -1,31 +1,58 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
+
 const GsapStagger = () => {
   // TODO: Implement the gsap.stagger() method
   useGSAP(() => {
     gsap.from(".stagger-box", {
-      x: 150,
-      y: 250,
-      duration: 2,
+      x: 100,
+      y:50,
+      opacity: 0,
+      duration: 1.5,
       ease: "power1.inOut",
-      rotation: 360,
+      rotation: 120,
       borderRadius: "100%",
       stagger: {
         amount: 0.5,
-        grid: [6,3],
+        grid: [6, 3],
         axis: "x",
         ease: "circ.inOut",
         from: "center",
       },
-      repeat: -1,
-      yoyo: true,
+      repeat: 0
     });
   }, []);
 
-
   return (
     <main>
+      <div className="mt-5">
+        <div className="flex gap-5">
+          <div className="w-20 h-20 bg-gray-700 rounded-lg stagger-box">
+            <div className="font-bold text-6xl flex justify-center  items-center text-green-600 ">p</div>
+          </div>
+          <div className="w-20 h-20 bg-gray-700 rounded-lg stagger-box">
+            <div className="font-bold text-6xl justify-center flex items-center text-green-600">w</div>
+          </div>
+          <div className="w-20 h-20 bg-gray-700 rounded-lg stagger-box">
+            <div className="font-bold text-6xl justify-center flex items-center text-green-600">d</div>
+          </div>
+
+          <div className="w-20 h-12 bg-green-600 rounded-lg stagger-box" >
+            <div className="font-bold text-4xl justify-center flex items-center">&gt;_</div>
+          </div>
+          <div className="w-10 h-10 bg-gray-700 rounded-lg stagger-box">
+            <div className="font-bold text-3xl justify-center flex items-center text-green-600">d</div>
+          </div>
+          <div className="w-10 h-10 bg-gray-700 rounded-lg stagger-box" >
+            <div className="font-bold text-3xl justify-center flex items-center text-green-600">e</div>
+          </div>
+          <div className="w-10 h-10 bg-gray-700 rounded-lg stagger-box">
+            <div className="font-bold text-3xl justify-center flex items-center text-green-600">v</div>
+          </div>
+        </div>
+      </div>
+      <br />
       <h1>GsapStagger</h1>
 
       <p className="mt-5 text-gray-500">
@@ -53,17 +80,7 @@ const GsapStagger = () => {
         feature.
       </p>
 
-      <div className="mt-20">
-        <div className="flex gap-5">
-          <div className="w-20 h-20 bg-green-200 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-green-300 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-green-400 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-green-500 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-green-600 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-green-700 rounded-lg stagger-box" />
-          <div className="w-20 h-20 bg-green-800 rounded-lg stagger-box" />
-        </div>
-      </div>
+
     </main>
   );
 };

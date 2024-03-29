@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const animations = [
   {
-    title: "GSAP To",
+    title: "Symbolic",
     description:
-      "The to() method is used to animate a single element from a starting state to an ending state.",
-    path: "/gsapto",
+      " Provides a dynamic way to access and utilize the current directory path.  $PWD is equivalent to the output of 'pwd -L'",
+    path: "/symbolic",
   },
   {
-    title: "GSAP From",
+    title: "Actual",
     description:
       "The from() method is used to animate a single element from an ending state to a starting state.",
     path: "/gsapfrom",
@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <main className="container">
       <div className="flex flex-col">
-        <h1 className="text-3xl font-bold text-zinc-50">GSAP Animations</h1>
+        <h1 className="text-2xl font-bold text-zinc-50">Find your path...</h1>
         <ol className="flex flex-col mt-10">
           {animations.map((animation, index) => (
             <li
@@ -57,17 +57,16 @@ const Home = () => {
             >
               <p>
                 <span className="text-sm font-bold text-zinc-50">
-                  {index + 1}.
                 </span>
               </p>
               <div className="flex flex-col gap-2 flex-1">
                 <Link
                   to={animation.path}
-                  className="text-md font-semibold text-blue-600"
+                  className="text-md font-semibold text-green-600"
                 >
                   {animation.title}
                 </Link>
-                <p className="text-gray-400 text-xs">{animation.description}</p>
+                <p className="text-gray-400 text-sm">{animation.description}</p>
               </div>
 
               <svg
