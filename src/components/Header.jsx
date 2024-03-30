@@ -1,14 +1,16 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
+import { Tooltip } from "flowbite-react";
+import { CgTerminal } from "react-icons/cg";
 
 export default function Header() {
   useGSAP(() => {
     gsap.from(".stagger-box", {
-      x: 100,
-      y: 50,
+      x: 150,
+      y: 150,
       opacity: 0,
-      duration: 1.5,
+      duration: 2.5,
       ease: "power1.inOut",
       rotation: 120,
       borderRadius: "100%",
@@ -22,57 +24,88 @@ export default function Header() {
       repeat: 0,
     });
   }, []);
-  //}
 
   return (
     <header>
       <div className="mt-1">
-        <div className="flex gap-3 justify-center">
-          <div className="w-20 h-20 bg-gray-700 rounded-lg stagger-box">
-            <div className="font-bold text-3xl sm:text-6xl flex justify-center items-center text-green-600 ">
+        <div className="gap-1 flex justify-center">
+          <div className="w-15 h-20  rounded-lg stagger-box">
+            <div className="mt-1 font-bold text-6xl flex justify-center items-center text-green-600 ">
               p
             </div>
           </div>
-          <div className="w-20 h-20 bg-gray-700 rounded-lg stagger-box">
-            <div className="font-bold text-6xl justify-center flex items-center text-green-600">
+          <div className="w-15 h-20  rounded-lg stagger-box">
+            <div className="mt-1 font-bold text-6xl justify-center flex items-center text-green-600">
               w
             </div>
           </div>
-          <div className="w-20 h-20 bg-gray-700 rounded-lg stagger-box">
-            <div className="font-bold text-6xl justify-center flex items-center text-green-600">
+          <div className="w-15 h-20  rounded-lg stagger-box">
+            <div className="mt-1 font-bold text-6xl justify-center flex items-center text-green-600">
               d
             </div>
           </div>
-          <div className="w-12 h-12 bg-green-600 rounded-lg stagger-box mt-4 hover:bg-black">
-            <Link
-              to="/"
-              className="font-extrabold text-4xl justify-center flex items-center text-black"
+          {/*           <div className="w-12 h-12 bg-green-600 rounded-lg stagger-box mt-4 hover:bg-black">
+            <Tooltip
+              content="Home"
+              className="text-xs text-orange-400"
+              style="dark"
+              position="bottom"
             >
-              &gt;
-              <p className="animate-ping">_</p>
-            </Link>
+              <Link
+                to="/"
+                alt="Home"
+                className="font-extrabold text-4xl justify-center flex items-center text-black"
+              >
+                &gt;
+                <span className="animate-ping">_</span>
+              </Link>
+            </Tooltip>
+          </div> */}
+          <div>
+            <CgTerminal className="w-20 h-20 stagger-box breadIcon" />
           </div>
-          <div className="flex gap-1 justify-center">
-            <div className="w-8 h-8 bg-gray-700 rounded-lg stagger-box hover:bg-black">
-              <Link className="font-semibold text-2xl justify-center flex items-center text-green-600">
-                d
-              </Link>
-            </div>
-            <div className="w-8 h-8 bg-gray-700 rounded-lg stagger-box hover:bg-black">
-              <Link
-                to="/gsapto"
-                className="font-semibold text-2xl justify-center flex items-center text-green-600"
+          <div className="flex justify-center mr-1">
+            <div className="mt-1 w-4 h-8  rounded-lg stagger-box flex justify-center">
+              <Tooltip
+                content="Discover"
+                className="text-xs text-orange-400"
+                style="dark"
+                position="bottom"
               >
-                e
-              </Link>
+                <Link className="font-semibold text-2xl justify-center flex items-center text-green-600">
+                  d
+                </Link>
+              </Tooltip>
             </div>
-            <div className="w-8 h-8 bg-gray-700 rounded-lg stagger-box hover:bg-black">
-              <Link
-                to="/gsapto"
-                className="font-semibold text-2xl justify-center flex items-center text-green-600"
+            <div className="mt-1 w-4 h-8  rounded-lg stagger-box  flex justify-center">
+              <Tooltip
+                content="Evaluate"
+                className="text-xs text-orange-400"
+                style="dark"
+                position="bottom"
               >
-                v
-              </Link>
+                <Link
+                  to="/gsapto"
+                  className="font-semibold text-2xl justify-center flex items-center text-green-600"
+                >
+                  e
+                </Link>
+              </Tooltip>
+            </div>
+            <div className="mt-1 w-4 h-8  rounded-lg stagger-box  flex justify-center">
+              <Tooltip
+                content="Validate"
+                className="text-xs text-orange-400"
+                style="dark"
+                position="bottom"
+              >
+                <Link
+                  to="/gsapto"
+                  className="font-semibold text-2xl justify-center flex items-center text-green-600"
+                >
+                  v
+                </Link>
+              </Tooltip>
             </div>
           </div>
         </div>

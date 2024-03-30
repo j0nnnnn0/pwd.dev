@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import HeaderBreadcumb from "./components/Breadcumb";
+import Footer from "./components/Footer";
 
 import {
   GsapFrom,
@@ -17,6 +19,7 @@ const App = () => {
     <div className="bg-black min-h-screen w-full">
       <Router basename={"/new"}>
         <Header />
+        <HeaderBreadcumb/>
         <Routes>
           <Route path="/symbolic" element={<Symbolic />} />
           <Route path="/gsapfrom" element={<GsapFrom />} />
@@ -27,6 +30,7 @@ const App = () => {
           <Route path="/gsaptext" element={<GsapText />} />
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

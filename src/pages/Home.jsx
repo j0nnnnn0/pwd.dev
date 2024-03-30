@@ -44,11 +44,12 @@ const animations = [
   },
 ];
 
+
 const Home = () => {
   return (
     <main className="container">
       <div className="flex flex-col">
-        <h1 className="text-2xl font-bold text-zinc-50">Find your path...</h1>
+        <h1 className="text-2xl font-bold text-zinc-300">Find your path...</h1>
         <ol className="flex flex-col mt-10">
           {animations.map((animation, index) => (
             <li
@@ -56,8 +57,7 @@ const Home = () => {
               className="flex flex-row gap-2 p-5 hover:bg-zinc-800/50 rounded-lg"
             >
               <p>
-                <span className="text-sm font-bold text-zinc-50">
-                </span>
+                <span className="text-sm font-bold text-zinc-50"></span>
               </p>
               <div className="flex flex-col gap-2 flex-1">
                 <Link
@@ -68,7 +68,6 @@ const Home = () => {
                 </Link>
                 <p className="text-gray-400 text-sm">{animation.description}</p>
               </div>
-
               <svg
                 className="size-6 text-gray-600 -rotate-90"
                 fill="currentColor"
