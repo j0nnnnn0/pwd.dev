@@ -57,9 +57,9 @@
 /* Custom CSS for the icon of the breadcrumb
  */
  .breadIcon {
-  @apply text-green-600 bg-transparent border-none cursor-pointer; 
+  @apply text-green-600 bg-transparent  cursor-pointer; 
 }
 
 .breadIcon:hover {
-  @apply text-orange-600 bg-transparent border-none cursor-pointer;
+  @apply text-orange-600 bg-transparent  cursor-pointer;
 }

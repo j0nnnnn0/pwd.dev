@@ -15,7 +15,9 @@
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.6",
     "gsap": "^3.12.5",
+    "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
+    "react-code-block": "^1.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3"
   },

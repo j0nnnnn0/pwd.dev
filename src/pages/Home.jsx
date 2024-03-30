@@ -6,65 +6,68 @@ import { MdRoundaboutRight, MdOutlineFindReplace } from "react-icons/md";
 import { CgMoreAlt } from "react-icons/cg";
 import { TbCurrentLocation } from "react-icons/tb";
 
-
 const animations = [
   {
-    icon:<VscSymbolNamespace className="w-10 h-10  text-zinc-300 "/>,
+    icon: <VscSymbolNamespace className="w-10 h-10  text-zinc-300 " />,
     title: "Symbolic",
     description:
-      " Provides a dynamic way to access and utilize the current directory path.  $PWD is equivalent to the output of 'pwd -L'",
+      "For a path that might change: 'pwd -L'",
     path: "/symbolic",
   },
   {
-    icon:<TbCurrentLocation className="w-10 h-10 text-zinc-300"/>,
+    icon: <TbCurrentLocation className="w-10 h-10 text-zinc-300" />,
     title: "Actual",
     description:
       "The from() method is used to animate a single element from an ending state to a starting state.",
     path: "/gsapfrom",
   },
   {
-    icon:<MdOutlineFindReplace className="w-10 h-10 text-zinc-300"/>,
+    icon: <MdOutlineFindReplace className="w-10 h-10 text-zinc-300" />,
     title: "Discover",
     description:
       "The fromTo() method is used to animate a single element from a starting state to an ending state and vice versa.",
     path: "/gsapfromto",
   },
   {
-    icon:<GiChoice className="w-10 h-10 text-zinc-300"/>,
+    icon: <GiChoice className="w-10 h-10 text-zinc-300" />,
     title: "Evaluate",
     description:
       "The timeline() method is used to create a timeline to manage multiple animations.",
     path: "/gsaptimeline",
   },
   {
-    icon:<GrValidate className="w-10 h-10 text-zinc-300"/>,
+    icon: <GrValidate className="w-10 h-10 text-zinc-300" />,
     title: "Validate",
     description:
       "The stagger() method is used to animate multiple elements with a stagger effect.",
     path: "/gsapstagger",
   },
   {
-    icon:<MdRoundaboutRight className="w-10 h-10 text-zinc-300"/>,
+    icon: <MdRoundaboutRight className="w-10 h-10 text-zinc-300" />,
     title: "About",
     description:
       "The ScrollTrigger plugin is used to trigger animations based on the scroll position.",
     path: "/gsapscrolltrigger",
   },
   {
-    icon:<CgMoreAlt className="w-10 h-10 text-zinc-300"/>,
+    icon: <CgMoreAlt className="w-10 h-10 text-zinc-300" />,
     title: "More or less...",
     description: "Learn how to animate text with GSAP.",
     path: "/gsaptext",
   },
 ];
 
-
 const Home = () => {
   return (
     <main className="container">
       <div className="flex flex-col">
         <h1 className="text-2xl font-bold text-zinc-300">Find your path...</h1>
-        <ol className="flex flex-col mt-10 shadow-md">
+        <p className="mt-3 text-zinc-400">
+          Imagine you're navigating through a maze of folders, and you lose
+          track of your location:<code>pwd.dev</code>is like having a GPS that tells
+          you exactly where you are and <code>where you want to be.</code>
+        </p>
+        <ol className="flex flex-col mt-3 shadow-md">
           {animations.map((animation, index) => (
             <li
               key={index}
@@ -73,9 +76,7 @@ const Home = () => {
               <p>
                 <span className="text-sm font-bold text-zinc-50"></span>
               </p>
-              <p>
-              {animation.icon}
-              </p>
+              <p>{animation.icon}</p>
               <div className="flex flex-col gap-2 flex-1">
                 <Link
                   to={animation.path}
