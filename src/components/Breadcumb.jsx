@@ -1,9 +1,33 @@
 import { Breadcrumb } from "flowbite-react";
 import { CgTerminal } from "react-icons/cg";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function HeaderBreadcrumb() {
+  const location = useLocation();
+  const pathnames = location.pathname.split("/").filter((x) => x);
+
   return (
+    <breadcrumb className="flex flex-col">
+      <div>
+        <Breadcrumb>
+          <Breadcrumb.Item href="/new">
+            <CgTerminal className=" ml-2 breadIcon" style={{ fontSize: "25px" }} /><a className="ml-2">pwd: </a>
+          </Breadcrumb.Item>
+          {pathnames.map((value, index) => {
+            const to = `/new/${pathnames.slice(0, index + 1).join("/")}`;
+            return (
+              <Breadcrumb.Item key={index} href={to}>
+                <a>{value}</a>
+              </Breadcrumb.Item>
+            );
+          })}
+        </Breadcrumb>
+      </div>
+    </breadcrumb>
+  );
+}
+
+/*   return (
     <breadcrumb className="flex flex-col">
       <div>
         <Breadcrumb>
@@ -20,4 +44,4 @@ export default function HeaderBreadcrumb() {
       </div>
     </breadcrumb>
   );
-}
+} */

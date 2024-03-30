@@ -67,7 +67,7 @@ export default function Header() {
           <div className="flex justify-center mr-1">
             <div className="mt-1 w-4 h-8  rounded-lg stagger-box flex justify-center">
               <Tooltip
-                content="Discover"
+                content="discover"
                 className="text-xs text-orange-400"
                 style="dark"
                 position="bottom"
@@ -79,7 +79,7 @@ export default function Header() {
             </div>
             <div className="mt-1 w-4 h-8  rounded-lg stagger-box  flex justify-center">
               <Tooltip
-                content="Evaluate"
+                content="evaluate"
                 className="text-xs text-orange-400"
                 style="dark"
                 position="bottom"
@@ -94,7 +94,7 @@ export default function Header() {
             </div>
             <div className="mt-1 w-4 h-8  rounded-lg stagger-box  flex justify-center">
               <Tooltip
-                content="Validate"
+                content="validate"
                 className="text-xs text-orange-400"
                 style="dark"
                 position="bottom"
