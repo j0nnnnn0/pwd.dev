@@ -7,7 +7,7 @@ export default function HeaderBreadcrumb() {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
-    <breadcrumb className="flex flex-col">
+    <breadcrumbs className="flex flex-col">
       <div>
         <Breadcrumb>
           <Breadcrumb.Item href="/new">
@@ -17,13 +17,13 @@ export default function HeaderBreadcrumb() {
             const to = `/new/${pathnames.slice(0, index + 1).join("/")}`;
             return (
               <Breadcrumb.Item key={index} href={to}>
-                <a>{value}</a>
+                <span>{value}</span>
               </Breadcrumb.Item>
             );
           })}
         </Breadcrumb>
       </div>
-    </breadcrumb>
+    </breadcrumbs>
   );
 }
 
