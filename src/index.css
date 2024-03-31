@@ -61,5 +61,5 @@
 }
 
 .breadIcon:hover {
-  @apply text-orange-600 bg-transparent  cursor-pointer;
+  @apply text-orange-400 bg-transparent  cursor-pointer;
 }

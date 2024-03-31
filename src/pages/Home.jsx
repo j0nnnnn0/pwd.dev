@@ -8,52 +8,46 @@ import { TbCurrentLocation } from "react-icons/tb";
 
 const animations = [
   {
-    icon: <VscSymbolNamespace className="w-10 h-10  text-zinc-300 " />,
-    title: "Symbolic",
-    description:
-      "For a path that might change: 'pwd -L'",
-    path: "/symbolic",
-  },
-  {
     icon: <TbCurrentLocation className="w-10 h-10 text-zinc-300" />,
     title: "Actual",
-    description:
-      "The from() method is used to animate a single element from an ending state to a starting state.",
-    path: "/gsapfrom",
+    description: "A good starting point?",
+    path: "/actual",
+  },
+  {
+    icon: <VscSymbolNamespace className="w-10 h-10  text-zinc-300 " />,
+    title: "Symbolic",
+    description: "For a path that might change",
+    path: "/symbolic",
   },
   {
     icon: <MdOutlineFindReplace className="w-10 h-10 text-zinc-300" />,
     title: "Discover",
-    description:
-      "The fromTo() method is used to animate a single element from a starting state to an ending state and vice versa.",
-    path: "/gsapfromto",
+    description: "Well, I never thought of that before.",
+    path: "/discover",
   },
   {
     icon: <GiChoice className="w-10 h-10 text-zinc-300" />,
     title: "Evaluate",
-    description:
-      "The timeline() method is used to create a timeline to manage multiple animations.",
-    path: "/gsaptimeline",
+    description: "Decisions, decisions...",
+    path: "/evaluate",
   },
   {
     icon: <GrValidate className="w-10 h-10 text-zinc-300" />,
     title: "Validate",
-    description:
-      "The stagger() method is used to animate multiple elements with a stagger effect.",
-    path: "/gsapstagger",
-  },
-  {
-    icon: <MdRoundaboutRight className="w-10 h-10 text-zinc-300" />,
-    title: "About",
-    description:
-      "The ScrollTrigger plugin is used to trigger animations based on the scroll position.",
-    path: "/gsapscrolltrigger",
+    description: "Got to make sure it makes sense.",
+    path: "/validate",
   },
   {
     icon: <CgMoreAlt className="w-10 h-10 text-zinc-300" />,
     title: "More or less...",
-    description: "Learn how to animate text with GSAP.",
-    path: "/gsaptext",
+    description: "More or less usefull stuff.",
+    path: "/moreorless",
+  },
+  {
+    icon: <MdRoundaboutRight className="w-10 h-10 text-zinc-300" />,
+    title: "About",
+    description: "Learn more about pwd.dev",
+    path: "/about",
   },
 ];
 
@@ -64,8 +58,8 @@ const Home = () => {
         <h1 className="text-2xl font-bold text-zinc-300">Find your path...</h1>
         <p className="mt-3 text-zinc-400">
           Imagine you're navigating through a maze of folders, and you lose
-          track of your location:<code>pwd.dev</code>is like having a GPS that tells
-          you exactly where you are and <code>where you want to be.</code>
+          track of your location:<code>pwd.dev</code>is like having a GPS that
+          tells you exactly where you are and <code>where you want to be.</code>
         </p>
         <ol className="flex flex-col mt-3 shadow-md">
           {animations.map((animation, index) => (

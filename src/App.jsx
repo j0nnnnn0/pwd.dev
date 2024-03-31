@@ -4,14 +4,14 @@ import HeaderBreadcumb from "./components/Breadcumb";
 import Footer from "./components/Footer";
 
 import {
-  GsapFrom,
+  Actual,
   Symbolic,
-  GsapScrollTrigger,
-  GsapStagger,
-  GsapText,
-  GsapTimeline,
-  GsapFromTo,
+  About,
+  Validate,
+  MoreOrLess,
+  Evaluate,
   Home,
+  Discover,
 } from "./pages";
 
 const App = () => {
@@ -19,15 +19,15 @@ const App = () => {
     <div className="bg-black min-h-screen w-full">
       <Router basename={"/"}>
         <Header />
-        <HeaderBreadcumb/>
+        <HeaderBreadcumb />
         <Routes>
           <Route path="/symbolic" element={<Symbolic />} />
-          <Route path="/gsapfrom" element={<GsapFrom />} />
-          <Route path="/gsapfromto" element={<GsapFromTo />} />
-          <Route path="/gsaptimeline" element={<GsapTimeline />} />
-          <Route path="/gsapstagger" element={<GsapStagger />} />
-          <Route path="/gsapscrolltrigger" element={<GsapScrollTrigger />} />
-          <Route path="/gsaptext" element={<GsapText />} />
+          <Route path="/actual" element={<Actual />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/evaluate" element={<Evaluate />} />
+          <Route path="/validate" element={<Validate />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/moreorless" element={<MoreOrLess />} />
           <Route path="/" element={<Home />} />
         </Routes>
         <Footer />

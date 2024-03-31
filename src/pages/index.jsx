@@ -1,19 +1,19 @@
 import Home from "./Home";
 import Symbolic from "./Symbolic";
-import GsapFrom from "./GsapFrom";
-import GsapFromTo from "./GsapFromTo";
-import GsapStagger from "./GsapStagger";
-import GsapTimeline from "./GsapTimeline";
-import GsapScrollTrigger from "./GsapScrollTrigger";
-import GsapText from "./GsapText";
+import Actual from "./Actual";
+import Discover from "./Discover";
+import Validate from "./Validate";
+import Evaluate from "./Evaluate";
+import About from "./About";
+import MoreOrLess from "./MoreOrLess";
 
 export {
   Symbolic,
-  GsapFrom,
-  GsapFromTo,
+  Actual,
+  Discover,
   Home,
-  GsapTimeline,
-  GsapScrollTrigger,
-  GsapStagger,
-  GsapText,
+  Evaluate,
+  About,
+  Validate,
+  MoreOrLess,
 };
