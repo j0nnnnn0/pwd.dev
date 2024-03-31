@@ -17,7 +17,7 @@ import {
 const App = () => {
   return (
     <div className="bg-black min-h-screen w-full">
-      <Router basename={"/new"}>
+      <Router basename={"/"}>
         <Header />
         <HeaderBreadcumb/>
         <Routes>

@@ -9,11 +9,11 @@ export default function HeaderBreadcrumb() {
   return (
       <div className="mx-auto max-w-3xl ring-1 bg-zinc-900 ring-zinc-300/20 xl:max-w-5xl p-1 text-white">
         <Breadcrumb>
-          <Breadcrumb.Item href="/new">
+          <Breadcrumb.Item href="/">
             <CgTerminal className=" ml-2 breadIcon" style={{ fontSize: "25px" }} />
           </Breadcrumb.Item>
           {pathnames.map((value, index) => {
-            const to = `/new/${pathnames.slice(0, index + 1).join("/")}`;
+            const to = `${pathnames.slice(0, index + 1).join("/")}`;
             return (
               <Breadcrumb.Item key={index} href={to}>
                 <span className="breadIcon">{value}</span>
