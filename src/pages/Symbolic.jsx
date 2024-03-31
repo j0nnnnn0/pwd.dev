@@ -24,7 +24,7 @@ const Symbolic = () => {
         Symbolic
       </h1>
       <p className="mt-3 text-zinc-400">
-        Imagine you're navigating through a maze of folders, and you lose track
+        Imagine you&apos;re navigating through a maze of folders, and you lose track
         of your location:<code>pwd.dev</code>is like having a GPS that tells you
         exactly where you are and <code>where you want to be.</code>
       </p>
