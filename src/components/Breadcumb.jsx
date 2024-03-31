@@ -29,7 +29,7 @@ export default function HeaderBreadcrumb() {
       <div className="flex flex-col">
         <div className="flex flex-wrap gap-2 pr-10">
           <Badge size="sm" color="success">
-            Time to find your path
+            Find your path
           </Badge>
         </div>
       </div>
