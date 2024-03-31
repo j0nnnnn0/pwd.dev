@@ -71,7 +71,7 @@ const Home = () => {
                 <span className="text-sm font-bold text-zinc-50"></span>
               </p>
               <p>{animation.icon}</p>
-              <div className="flex flex-col gap-2 flex-1">
+              <div className="flex flex-col flex-1">
                 <Link
                   to={animation.path}
                   className="text-md font-semibold text-green-600"
