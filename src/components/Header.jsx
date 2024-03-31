@@ -44,23 +44,6 @@ export default function Header() {
               d
             </div>
           </div>
-          {/*           <div className="w-12 h-12 bg-green-600 rounded-lg stagger-box mt-4 hover:bg-black">
-            <Tooltip
-              content="Home"
-              className="text-xs text-orange-400"
-              style="dark"
-              position="bottom"
-            >
-              <Link
-                to="/"
-                alt="Home"
-                className="font-extrabold text-4xl justify-center flex items-center text-black"
-              >
-                &gt;
-                <span className="animate-ping">_</span>
-              </Link>
-            </Tooltip>
-          </div> */}
           <div>
             <CgTerminal className="w-20 h-20 stagger-box breadIcon" />
           </div>
@@ -72,7 +55,10 @@ export default function Header() {
                 style="dark"
                 position="bottom"
               >
-                <Link className="font-semibold text-2xl justify-center flex items-center text-green-600">
+                <Link
+                  to="/discover"
+                  className="font-semibold text-2xl justify-center flex items-center text-green-600"
+                >
                   d
                 </Link>
               </Tooltip>
@@ -85,7 +71,7 @@ export default function Header() {
                 position="bottom"
               >
                 <Link
-                  to="/gsapto"
+                  to="/evaluate"
                   className="font-semibold text-2xl justify-center flex items-center text-green-600"
                 >
                   e
@@ -100,7 +86,7 @@ export default function Header() {
                 position="bottom"
               >
                 <Link
-                  to="/gsapto"
+                  to="/validate"
                   className="font-semibold text-2xl justify-center flex items-center text-green-600"
                 >
                   v

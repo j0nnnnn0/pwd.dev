@@ -1,7 +1,6 @@
 import { Breadcrumb, Badge } from "flowbite-react";
 import { CgTerminal } from "react-icons/cg";
 import { useLocation } from "react-router-dom";
-import { HiCheck, HiClock } from "react-icons/hi";
 
 export default function HeaderBreadcrumb() {
   const location = useLocation();
@@ -29,8 +28,9 @@ export default function HeaderBreadcrumb() {
       </div>
       <div className="flex flex-col">
         <div className="flex flex-wrap gap-2 pr-10">
-          <Badge size="sm" color="dark" >2 minutes ago</Badge>
-          <Badge size="sm" color="success" >Time to find your path</Badge>
+          <Badge size="sm" color="success">
+            Time to find your path
+          </Badge>
         </div>
       </div>
     </div>
