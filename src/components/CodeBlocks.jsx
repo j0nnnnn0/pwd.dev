@@ -15,9 +15,9 @@ function CodeBlocks({ code, language, filename }) {
 
   return (
     <CodeBlock code={code} language={language} lines={["4:6"]}>
-      <div className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg">
+      <div className="relative bg-gray-900 rounded-xl overflow-x-auto shadow-lg">
         {/* Filename */}
-        <div className="text-sm text-gray-400 px-6 py-4">{filename}</div>
+        <div className="text-xs text-gray-400 px-6 py-4">{filename}</div>
 
         <CodeBlock.Code className="!px-0">
           {({ isLineHighlighted }) => (
@@ -34,8 +34,8 @@ function CodeBlocks({ code, language, filename }) {
               >
                 +
               </div>
-              <CodeBlock.LineNumber className="table-cell pr-4 text-sm text-gray-500 text-right select-none" />
-              <CodeBlock.LineContent className="table-cell w-full pr-6">
+              <CodeBlock.LineNumber className="table-cell pr-4 text-xs text-gray-500 text-right select-none" />
+              <CodeBlock.LineContent className="table-cell w-full pr-6 text-sm">
                 <CodeBlock.Token />
               </CodeBlock.LineContent>
             </div>

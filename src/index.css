@@ -6,6 +6,11 @@
   scroll-behavior: smooth;
 }
 
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
 @layer components {
   code {
     @apply font-mono text-sm bg-zinc-900 text-orange-400 p-1;
