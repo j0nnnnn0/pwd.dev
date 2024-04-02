@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { TbCurrentLocation } from "react-icons/tb";
+import BottomBanner from "../components/BottomBanner";
 
 const Actual = () => {
   useGSAP(() => {
@@ -35,6 +36,9 @@ const Actual = () => {
 
       <div className="mt-20">
         <div id="green-box" className="w-20 h-20 bg-green-500 rounded-lg" />
+      </div>
+      <div>
+        <BottomBanner />
       </div>
     </main>
   );

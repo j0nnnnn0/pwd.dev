@@ -42,7 +42,7 @@ export default function Header() {
               w
             </div>
           </div>
-          <div className="w-15 h-20  rounded-lg stagger-box">
+          <div className="w-15 h-20  rounded-lg stagger-box bg">
             <div className="mt-1 font-bold text-6xl justify-center flex items-center text-green-600">
               d
             </div>
@@ -55,7 +55,7 @@ export default function Header() {
               position="bottom"
             >
               <CgTerminal
-                className="w-20 h-20 stagger-box breadIcon"
+                className="w-20 h-20 stagger-box breadIcon hover:animate-bounce cursor-pointer"
                 onClick={() => navigate("/")}
               />
             </Tooltip>
@@ -70,7 +70,7 @@ export default function Header() {
               >
                 <Link
                   to="/discover"
-                  className="font-semibold text-2xl justify-center flex items-center text-green-600"
+                  className="font-semibold text-2xl justify-center flex items-center text-green-600 hover:animate-bounce"
                 >
                   d
                 </Link>
@@ -85,7 +85,7 @@ export default function Header() {
               >
                 <Link
                   to="/evaluate"
-                  className="font-semibold text-2xl justify-center flex items-center text-green-600"
+                  className="font-semibold text-2xl justify-center flex items-center text-green-600 hover:animate-bounce"
                 >
                   e
                 </Link>
@@ -100,7 +100,7 @@ export default function Header() {
               >
                 <Link
                   to="/validate"
-                  className="font-semibold text-2xl justify-center flex items-center text-green-600"
+                  className="font-semibold text-2xl justify-center flex items-center text-green-600 hover:animate-bounce"
                 >
                   v
                 </Link>

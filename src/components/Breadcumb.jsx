@@ -17,13 +17,6 @@ export default function HeaderBreadcrumb() {
               style={{ fontSize: "25px" }}
             />
           </Breadcrumb.Item>
-          {/*  old code for home navigation, replaced by useNavigate         
-          <Breadcrumb.Item href="/">
-            <CgTerminal
-              className=" ml-2 breadIcon"
-              style={{ fontSize: "25px" }}
-            />
-          </Breadcrumb.Item> */}
           {pathnames.map((value, index) => {
             const to = `${pathnames.slice(0, index + 1).join("/")}`;
             return (
@@ -35,7 +28,7 @@ export default function HeaderBreadcrumb() {
         </Breadcrumb>
       </div>
       <div className="flex flex-col">
-        <div className="flex flex-wrap gap-2 pr-10">
+        <div className="flex flex-wrap gap-2 pr-10 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-150  duration-300">
           <Badge size="sm" color="success">
             Find your path
           </Badge>

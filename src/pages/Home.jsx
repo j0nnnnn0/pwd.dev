@@ -5,6 +5,7 @@ import { GrValidate } from "react-icons/gr";
 import { MdRoundaboutRight, MdOutlineFindReplace } from "react-icons/md";
 import { CgMoreAlt } from "react-icons/cg";
 import { TbCurrentLocation } from "react-icons/tb";
+import StickyBanner from "../components/StickyBanner";
 
 const animations = [
   {
@@ -56,6 +57,7 @@ const Home = () => {
     <main className="container">
       <div className="flex flex-col">
         <h1 className="text-2xl font-bold text-zinc-300">Find your path...</h1>
+        <StickyBanner/>
         <p className="mt-3 text-zinc-400">
           Imagine you&apos;re navigating through a maze of folders, and you lose
           track of your location:<code>pwd.dev</code>is like having a GPS that
