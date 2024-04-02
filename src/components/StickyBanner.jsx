@@ -1,23 +1,22 @@
-import { Banner, Badge} from "flowbite-react";
+import { Banner, Badge } from "flowbite-react";
 import { HiClock } from "react-icons/hi";
 import { CgTerminal } from "react-icons/cg";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function StickyBanner() {
+  const [daysLeft, setDaysLeft] = useState(0);
 
-    const [daysLeft, setDaysLeft] = useState(0);
-
-    useEffect(() => {
-      const timer = setInterval(() => {
-        const now = new Date();
-        const targetDate = new Date('2024-06-01');
-        const diffTime = Math.abs(targetDate - now);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        setDaysLeft(diffDays);
-      }, 1000);
-      return () => clearInterval(timer);
-    }, []);
-
+  useEffect(() => {
+    // Set the date we're counting down to
+    const timer = setInterval(() => {
+      const now = new Date();
+      const targetDate = new Date("2024-06-01");
+      const diffTime = Math.abs(targetDate - now);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      setDaysLeft(diffDays);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <Banner>
@@ -40,9 +39,9 @@ export default function StickyBanner() {
           </p>
         </div>
         <div className="flex shrink-0 items-center">
-        <Badge className="text-zinc-300" color="dark" icon={HiClock}>
-        {daysLeft} {daysLeft === 1 ? 'day' : 'days'} to go
-      </Badge>
+          <Badge className="text-zinc-300" color="dark" icon={HiClock}>
+            {daysLeft} {daysLeft === 1 ? "day" : "days"} to go
+          </Badge>
         </div>
       </div>
     </Banner>

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Banner } from "flowbite-react";
@@ -12,7 +11,7 @@ export default function BottomBanner() {
         <div className="mx-auto flex items-center">
           <p className="flex items-center text-sm font-normal text-gray-400">
             <span className="mr-3 inline-flex h-6 w-6 items-center justify-center rounded-full  p-1 bg-gray-600">
-              <GiPathDistance  className="h-10 w-10" />
+              <GiPathDistance className="h-10 w-10" />
             </span>
             <span className="font-medium ">
               Find your path;
@@ -26,7 +25,10 @@ export default function BottomBanner() {
             </span>
           </p>
         </div>
-        <Banner.CollapseButton color="gray" className="border-0 bg-transparent text-gray-400">
+        <Banner.CollapseButton
+          color="gray"
+          className="border-0 bg-transparent text-gray-400"
+        >
           <HiX className="h-4 w-4" />
         </Banner.CollapseButton>
       </div>
