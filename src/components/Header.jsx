@@ -3,8 +3,11 @@ import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 import { Tooltip } from "flowbite-react";
 import { CgTerminal } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
+
   useGSAP(() => {
     gsap.from(".stagger-box", {
       x: 150,
@@ -45,7 +48,17 @@ export default function Header() {
             </div>
           </div>
           <div>
-            <CgTerminal className="w-20 h-20 stagger-box breadIcon" />
+            <Tooltip
+              content="home"
+              className="text-xs text-orange-400"
+              style="dark"
+              position="bottom"
+            >
+              <CgTerminal
+                className="w-20 h-20 stagger-box breadIcon"
+                onClick={() => navigate("/")}
+              />
+            </Tooltip>
           </div>
           <div className="flex justify-center mr-1">
             <div className="mt-1 w-4 h-8  rounded-lg stagger-box flex justify-center">
